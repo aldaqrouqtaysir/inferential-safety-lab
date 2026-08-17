@@ -90,6 +90,7 @@ def test_fresh_process_replay_is_byte_identical(tmp_path: Path) -> None:
     ]
     subprocess.run([*command, str(first)], check=True, capture_output=True, text=True)
     subprocess.run([*command, str(second)], check=True, capture_output=True, text=True)
-    assert (first / "aggregate.canonical.json").read_bytes() == (
-        second / "aggregate.canonical.json"
-    ).read_bytes()
+    first_bytes = (first / "aggregate.canonical.json").read_bytes()
+    second_bytes = (second / "aggregate.canonical.json").read_bytes()
+    assert first_bytes == second_bytes
+    assert json.loads(first_bytes)["replay_hash"] == json.loads(second_bytes)["replay_hash"]

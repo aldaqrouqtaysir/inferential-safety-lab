@@ -13,6 +13,7 @@ import numpy as np
 from inferential_safety_lab.core.configuration import ScenarioId
 from inferential_safety_lab.core.corruption import corrupt
 from inferential_safety_lab.core.dgp import generate_truth
+from inferential_safety_lab.core.scientific_reference import assert_scientific_reference
 from inferential_safety_lab.core.seeds import rng_for
 from inferential_safety_lab.methods.contracts import method_panel
 from inferential_safety_lab.methods.interventions import guarded_delete
@@ -41,8 +42,10 @@ from inferential_safety_lab.services.presets import get_preset
 from inferential_safety_lab.services.run_lab import run_lab
 
 ROOT = Path(__file__).parents[2]
-V010_NUMERIC_LEAF_COUNT = 184
-V010_NUMERIC_FINGERPRINT = "ab232be3ea0d25ceb4e1459be82ac34760237d565df875aea89250a869a905aa"
+WINDOWS_REFERENCE_NUMERIC_LEAF_COUNT = 184
+WINDOWS_REFERENCE_NUMERIC_FINGERPRINT = (
+    "ab232be3ea0d25ceb4e1459be82ac34760237d565df875aea89250a869a905aa"
+)
 
 
 def _independent_hc3(
@@ -130,12 +133,18 @@ def test_complete_case_and_reporting_guard_are_identical_when_guard_passes() -> 
     assert (passed, withheld) == (43, 117)
 
 
-def test_frozen_v010_scientific_numeric_aggregates_are_unchanged() -> None:
-    current = run_lab(get_preset(ScenarioId.MCAR_SMALL_EFFECTIVE_SAMPLE)).aggregate
-    assert _numeric_fingerprint(current) == (
-        V010_NUMERIC_LEAF_COUNT,
-        V010_NUMERIC_FINGERPRINT,
+def test_checked_in_windows_reference_retains_historical_numeric_fingerprint() -> None:
+    reference = json.loads((ROOT / "artifacts/demo/aggregate.canonical.json").read_text())
+    assert _numeric_fingerprint(reference) == (
+        WINDOWS_REFERENCE_NUMERIC_LEAF_COUNT,
+        WINDOWS_REFERENCE_NUMERIC_FINGERPRINT,
     )
+
+
+def test_frozen_v010_scientific_reference_is_portably_equivalent() -> None:
+    current = run_lab(get_preset(ScenarioId.MCAR_SMALL_EFFECTIVE_SAMPLE)).aggregate
+    reference = json.loads((ROOT / "artifacts/demo/aggregate.canonical.json").read_text())
+    assert_scientific_reference(reference, current)
 
     tagged = subprocess.run(
         ["git", "show", "v0.1.0:artifacts/demo/aggregate.canonical.json"],
@@ -145,10 +154,12 @@ def test_frozen_v010_scientific_numeric_aggregates_are_unchanged() -> None:
         text=True,
     )
     if tagged.returncode == 0:
-        assert _numeric_fingerprint(json.loads(tagged.stdout)) == (
-            V010_NUMERIC_LEAF_COUNT,
-            V010_NUMERIC_FINGERPRINT,
+        tagged_reference = json.loads(tagged.stdout)
+        assert _numeric_fingerprint(tagged_reference) == (
+            WINDOWS_REFERENCE_NUMERIC_LEAF_COUNT,
+            WINDOWS_REFERENCE_NUMERIC_FINGERPRINT,
         )
+        assert_scientific_reference(reference, tagged_reference)
 
 
 def test_guard_failure_is_a_reporting_contract_state_with_a_public_label() -> None:
