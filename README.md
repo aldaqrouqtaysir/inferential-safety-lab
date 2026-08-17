@@ -4,6 +4,8 @@ See how analysis choices behave when data go wrong.
 
 [![CI](https://github.com/aldaqrouqtaysir/inferential-safety-lab/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/aldaqrouqtaysir/inferential-safety-lab/actions/workflows/ci.yml?query=branch%3Amain)
 
+[**Open the verified Live Demo**](https://inferential-safety-lab.streamlit.app/)
+
 Inferential Safety Lab creates synthetic data where the correct answer is known,
 removes or distorts some measurements, applies a fixed set of analysis
 approaches, and compares:
@@ -21,12 +23,12 @@ approaches, and compares:
 
 Version 0.2.1 is the first public release. The source repository is
 [github.com/aldaqrouqtaysir/inferential-safety-lab](https://github.com/aldaqrouqtaysir/inferential-safety-lab).
-No live deployment is claimed until the hosted application has been verified.
+The public application is deployed from `main` on Streamlit Community Cloud.
 
 ## Live demo
 
-The public Streamlit URL will be added here only after the public repository,
-GitHub Actions workflow, and hosted application have all been verified.
+Run the verified public application at
+[inferential-safety-lab.streamlit.app](https://inferential-safety-lab.streamlit.app/).
 
 ## Product flow
 

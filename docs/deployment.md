@@ -1,6 +1,7 @@
-# Deployment preparation for version 0.2.0
+# Deployment for version 0.2.1
 
-No deployment is performed by this repository.
+The verified public application is available at
+[inferential-safety-lab.streamlit.app](https://inferential-safety-lab.streamlit.app/).
 
 ## Local Python
 
@@ -18,6 +19,10 @@ Windows users can run `scripts/launch-windows.ps1` after installation.
 Use `streamlit_app.py` as the entry point and Python 3.12. The app needs no
 secret, database, remote API, model download, R runtime, or persistent volume.
 Public deployment must remain synthetic-only.
+
+The Community Cloud deployment uses the public
+`aldaqrouqtaysir/inferential-safety-lab` repository, branch `main`, Python 3.12,
+and no secrets. Updates to `main` trigger the hosted application to redeploy.
 
 The application uses top navigation with `Understand` at `/`, `Experiment` at
 `/experiment`, and `Results` at `/results`. It is intentionally light under both
@@ -39,5 +44,5 @@ Streamlit. It does not require pytest, coverage, mypy, Ruff, Playwright, or
 package-build tooling. After runtime dependencies are installed, simulation and
 report generation require no network access.
 
-No live-demo URL, remote, credential, tag, push, or deployment is created as
-part of the local release preparation.
+The deployment requires no runtime credential, user account, upload, telemetry,
+or persistent user-data store.
