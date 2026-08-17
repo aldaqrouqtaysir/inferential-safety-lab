@@ -38,6 +38,12 @@ dev = [
 [project.scripts]
 inferential-safety = "inferential_safety_lab.cli:main"
 
+[project.urls]
+Homepage = "https://github.com/aldaqrouqtaysir/inferential-safety-lab"
+Repository = "https://github.com/aldaqrouqtaysir/inferential-safety-lab"
+Documentation = "https://github.com/aldaqrouqtaysir/inferential-safety-lab/tree/main/docs"
+Issues = "https://github.com/aldaqrouqtaysir/inferential-safety-lab/issues"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 

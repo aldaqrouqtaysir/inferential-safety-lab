@@ -1,9 +1,10 @@
 # Public release provenance
 
-Version 0.2.1 is the current sanitized public candidate for Inferential Safety Lab.
+Version 0.2.1 is the first public release of Inferential Safety Lab at
+<https://github.com/aldaqrouqtaysir/inferential-safety-lab>.
 
-The public mirror is prepared from an explicitly allowlisted source tree. It is
-intended to contain one honest initial public-release commit, not a simulated or
+The public mirror was prepared from an explicitly allowlisted source tree. It
+begins with one honest initial public-release commit, not a simulated or
 backdated development history. Private repository metadata, private planning
 notes, caches, coverage output, environments, and migration-working documents
 are not part of the mirror.

@@ -7,6 +7,8 @@ date-released: 2026-08-17
 authors:
   - name: "Taysir"
 license: BSD-3-Clause
+repository-code: "https://github.com/aldaqrouqtaysir/inferential-safety-lab"
+url: "https://github.com/aldaqrouqtaysir/inferential-safety-lab"
 abstract: >-
   Interactive, failure-aware simulation using bounded and reproducible
   synthetic-data scenarios with a known answer.

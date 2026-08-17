@@ -17,8 +17,9 @@ approaches, and compares:
 
 ![Understand page](docs/images/01-understand.png)
 
-Version 0.2.1 is the current sanitized public candidate. No public deployment is
-performed by this repository.
+Version 0.2.1 is the first public release. The source repository is
+[github.com/aldaqrouqtaysir/inferential-safety-lab](https://github.com/aldaqrouqtaysir/inferential-safety-lab).
+No live deployment is claimed until the hosted application has been verified.
 
 ## Live demo
 
