@@ -2,6 +2,8 @@
 
 See how analysis choices behave when data go wrong.
 
+[![CI](https://github.com/aldaqrouqtaysir/inferential-safety-lab/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/aldaqrouqtaysir/inferential-safety-lab/actions/workflows/ci.yml?query=branch%3Amain)
+
 Inferential Safety Lab creates synthetic data where the correct answer is known,
 removes or distorts some measurements, applies a fixed set of analysis
 approaches, and compares:
