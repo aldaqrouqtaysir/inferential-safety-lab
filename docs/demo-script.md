@@ -35,9 +35,9 @@ withholding can be intentional safety behavior.
 ## 2:20-2:45 | Exact record
 
 Open **Technical details and exact records** to show formulas, exact
-denominators, method contracts, the replay command, run fingerprint, and
-canonical JSON. Close it, prepare the **Inferential Safety Card**, and explain
-that the card is a self-contained audit-ready record.
+denominators, method contracts, the replay command, environment-specific run
+fingerprint, and canonical JSON. Close it, prepare the **Inferential Safety
+Card**, and explain that the card is a self-contained audit-ready record.
 
 Finish by using **Change settings** and **Start another experiment** so the
 visitor sees how to revise or restart the workflow.

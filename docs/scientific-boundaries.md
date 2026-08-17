@@ -18,5 +18,13 @@ No overall safety score, leaderboard, automatic recommendation, or universal
 winner is computed. Plain-language observations are rule-based and always end
 with a context-specific conclusion.
 
+Supported environments can use different floating-point kernels for
+transcendental functions and BLAS/LAPACK operations. Reproducibility therefore
+distinguishes byte-exact replay inside one fixed environment from typed
+cross-platform scientific equivalence. Platform variation may affect only
+finite low-order floats within the frozen `1e-12` tolerance; discrete data,
+states, counts, denominators, method ordering, scenario-freeze decisions, and
+displayed conclusions remain exact.
+
 V0.1 is synthetic-only: no upload, URL input, external API, database,
 authentication, telemetry, model download, or post-install network path exists.

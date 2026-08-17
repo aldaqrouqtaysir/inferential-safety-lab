@@ -137,10 +137,19 @@ attempts. See [methods.md](docs/methods.md) and
 
 Runs use NumPy `PCG64`, domain-separated SHA-256 seed derivation, versioned
 configuration and result schemas, canonical JSON, dependency identities, and a
-replay hash. Identical configuration and seed produce byte-identical aggregate
-JSON in fresh processes. Timing is written separately because scheduling is not
-scientifically reproducible. Runtime diagnostics do not contain an absolute
-Python executable path.
+replay hash. Two fresh processes produce byte-identical aggregate JSON and the
+same raw replay hash when platform, architecture, Python version, NumPy build,
+dependency environment, configuration, and seed are the same. Raw hashes are
+environment-specific; they are not a claim of byte identity across operating
+systems or numerical-library builds.
+
+Across the supported Windows/Python 3.12 and Ubuntu/Python 3.12–3.13 matrix,
+scientific structure and all counts, identifiers, states, denominators, and
+displayed conclusions must match exactly. Finite scientific floats are compared
+to the checked-in reference with `rtol = 1e-12` and `atol = 1e-12`. Platform
+floating-point libraries can produce smaller low-order differences. Timing is
+written separately because scheduling is not scientifically reproducible.
+Runtime diagnostics do not contain an absolute Python executable path.
 
 Only aggregate synthetic results leave the engine. The UI contains no upload,
 URL input, or external-data widget, and simulation requires no network after
@@ -168,6 +177,8 @@ empty and successful Results states, stale-result prevention, progress
 announcements, focus visibility, target size, heading order and clipping,
 contrast tokens, reduced motion, console errors, light and dark OS preferences,
 1440x1000, 1366x768, 1024x768, 390x844, and a 125% zoom-equivalent layout.
+Every CI matrix job independently tests exact fresh-process replay; the frozen
+reference test separately enforces typed cross-platform scientific equivalence.
 
 ![Standalone Safety Card](docs/images/05-safety-card.png)
 

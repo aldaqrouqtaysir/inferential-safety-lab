@@ -42,3 +42,9 @@ The canonical JSON contains configuration, environment identity, method
 contracts, aggregate metrics, chart-ready aggregate values, the clean-data
 reference summary, and replay material. It contains no preview rows or
 row-level data. The Safety Card is rendered entirely from this aggregate.
+
+Environment identity and the raw replay hash participate in exact-environment
+replay but are excluded from the typed cross-platform scientific comparison.
+Timing remains outside the canonical aggregate. All remaining scientific paths
+are compared with exact typed states and bounded finite floats as documented in
+[reproducibility.md](reproducibility.md).
