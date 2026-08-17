@@ -1,0 +1,132 @@
+[
+  {
+    "viewport": "1920x1080",
+    "os_preference": "light",
+    "device_scale_factor": 1.0,
+    "zoom_equivalent": "100%",
+    "computed_background": "rgb(255, 253, 248)",
+    "document_overflow": false,
+    "console_errors": [],
+    "status": "passed"
+  },
+  {
+    "viewport": "1920x1080",
+    "os_preference": "dark",
+    "device_scale_factor": 1.0,
+    "zoom_equivalent": "100%",
+    "computed_background": "rgb(255, 253, 248)",
+    "document_overflow": false,
+    "console_errors": [],
+    "status": "passed"
+  },
+  {
+    "viewport": "1600x900",
+    "os_preference": "light",
+    "device_scale_factor": 1.0,
+    "zoom_equivalent": "100%",
+    "computed_background": "rgb(255, 253, 248)",
+    "document_overflow": false,
+    "console_errors": [],
+    "status": "passed"
+  },
+  {
+    "viewport": "1600x900",
+    "os_preference": "dark",
+    "device_scale_factor": 1.0,
+    "zoom_equivalent": "100%",
+    "computed_background": "rgb(255, 253, 248)",
+    "document_overflow": false,
+    "console_errors": [],
+    "status": "passed"
+  },
+  {
+    "viewport": "1440x1000",
+    "os_preference": "light",
+    "device_scale_factor": 1.0,
+    "zoom_equivalent": "100%",
+    "computed_background": "rgb(255, 253, 248)",
+    "document_overflow": false,
+    "console_errors": [],
+    "status": "passed"
+  },
+  {
+    "viewport": "1440x1000",
+    "os_preference": "dark",
+    "device_scale_factor": 1.0,
+    "zoom_equivalent": "100%",
+    "computed_background": "rgb(255, 253, 248)",
+    "document_overflow": false,
+    "console_errors": [],
+    "status": "passed"
+  },
+  {
+    "viewport": "1366x768",
+    "os_preference": "light",
+    "device_scale_factor": 1.0,
+    "zoom_equivalent": "100%",
+    "computed_background": "rgb(255, 253, 248)",
+    "document_overflow": false,
+    "console_errors": [],
+    "status": "passed"
+  },
+  {
+    "viewport": "1366x768",
+    "os_preference": "dark",
+    "device_scale_factor": 1.0,
+    "zoom_equivalent": "100%",
+    "computed_background": "rgb(255, 253, 248)",
+    "document_overflow": false,
+    "console_errors": [],
+    "status": "passed"
+  },
+  {
+    "viewport": "1024x768",
+    "os_preference": "light",
+    "device_scale_factor": 1.0,
+    "zoom_equivalent": "100%",
+    "computed_background": "rgb(255, 253, 248)",
+    "document_overflow": false,
+    "console_errors": [],
+    "status": "passed"
+  },
+  {
+    "viewport": "1024x768",
+    "os_preference": "dark",
+    "device_scale_factor": 1.0,
+    "zoom_equivalent": "100%",
+    "computed_background": "rgb(255, 253, 248)",
+    "document_overflow": false,
+    "console_errors": [],
+    "status": "passed"
+  },
+  {
+    "viewport": "390x844",
+    "os_preference": "light",
+    "device_scale_factor": 1.0,
+    "zoom_equivalent": "100%",
+    "computed_background": "rgb(255, 253, 248)",
+    "document_overflow": false,
+    "console_errors": [],
+    "status": "passed"
+  },
+  {
+    "viewport": "390x844",
+    "os_preference": "dark",
+    "device_scale_factor": 1.0,
+    "zoom_equivalent": "100%",
+    "computed_background": "rgb(255, 253, 248)",
+    "document_overflow": false,
+    "console_errors": [],
+    "status": "passed"
+  },
+  {
+    "viewport": "1152x800",
+    "os_preference": "dark",
+    "device_scale_factor": 1.25,
+    "zoom_equivalent": "125%",
+    "computed_background": "rgb(255, 253, 248)",
+    "document_overflow": false,
+    "console_errors": [],
+    "status": "passed"
+  }
+]

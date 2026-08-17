@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "Inferential Safety Lab"
+type: software
+version: 0.2.1
+date-released: 2026-08-17
+authors:
+  - name: "Taysir"
+license: BSD-3-Clause
+abstract: >-
+  Interactive, failure-aware simulation using bounded and reproducible
+  synthetic-data scenarios with a known answer.
+keywords:
+  - statistical simulation
+  - missing data
+  - robust estimation
+  - reproducible research software

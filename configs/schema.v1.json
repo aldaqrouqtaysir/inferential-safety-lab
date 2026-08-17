@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/inferential-safety-lab/config.v1.schema.json",
+  "title": "Inferential Safety Lab configuration V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "sample_size",
+    "tau",
+    "repetitions",
+    "master_seed",
+    "missingness_rate",
+    "contamination_fraction",
+    "contamination_displacement",
+    "confidence_level",
+    "winsorization_limits"
+  ],
+  "properties": {
+    "schema_version": {"const": "inferential_safety_lab.config.v1"},
+    "scenario_id": {
+      "enum": ["MCAR_SMALL_EFFECTIVE_SAMPLE", "OUTCOME_DEPENDENT_MAR", "GROSS_CONTAMINATION"]
+    },
+    "sample_size": {"enum": [100, 150, 300, 500]},
+    "tau": {"enum": [0.0, 0.25, 0.5]},
+    "repetitions": {"type": "integer", "minimum": 80, "maximum": 500},
+    "master_seed": {"type": "integer", "minimum": 0},
+    "missingness_rate": {"type": "number", "minimum": 0.15, "maximum": 0.70},
+    "contamination_fraction": {"type": "number", "minimum": 0.01, "maximum": 0.15},
+    "contamination_displacement": {"type": "number", "minimum": 4.0, "maximum": 12.0},
+    "confidence_level": {"type": "number", "exclusiveMinimum": 0.0, "exclusiveMaximum": 1.0},
+    "winsorization_limits": {
+      "type": "array",
+      "prefixItems": [{"type": "number"}, {"type": "number"}],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    }
+  }
+}

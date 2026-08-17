@@ -1,0 +1,13 @@
+{
+  "schema_version": "inferential_safety_lab.config.v1",
+  "scenario_id": "GROSS_CONTAMINATION",
+  "sample_size": 300,
+  "tau": 0.25,
+  "repetitions": 160,
+  "master_seed": 2026081721,
+  "missingness_rate": 0.25,
+  "contamination_fraction": 0.08,
+  "contamination_displacement": 8.0,
+  "confidence_level": 0.95,
+  "winsorization_limits": [-3.0, 3.0]
+}

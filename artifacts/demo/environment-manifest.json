@@ -1,0 +1,11 @@
+{
+  "bit_generator": "numpy.random.PCG64",
+  "dependencies": {
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "streamlit": "1.61.1"
+  },
+  "implementation": "CPython",
+  "platform": "Windows-AMD64",
+  "python": "3.12.13"
+}

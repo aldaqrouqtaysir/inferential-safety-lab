@@ -1,0 +1,24 @@
+{
+  "machine": "Windows-11-10.0.26200-SP0",
+  "method_runtime": {
+    "complete_case_ols_hc3": {
+      "attempts": 160,
+      "median_runtime_seconds": 0.00010985019616782665
+    },
+    "guarded_deletion_ols_hc3": {
+      "attempts": 160,
+      "median_runtime_seconds": 1.1200085282325745e-05
+    },
+    "median_imputation_ols": {
+      "attempts": 160,
+      "median_runtime_seconds": 0.0002258499152958393
+    },
+    "regression_imputation_ols": {
+      "attempts": 160,
+      "median_runtime_seconds": 0.00029295007698237896
+    }
+  },
+  "note": "Performance diagnostics are intentionally excluded from the replay hash.",
+  "repetitions_per_second": 697.123408074824,
+  "wall_seconds": 0.22951459977775812
+}
