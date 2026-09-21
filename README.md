@@ -123,6 +123,10 @@ Results stay separate across configurations and seeds, with no pooled score or
 method ranking. See [studies.md](docs/studies.md) for the configuration format,
 scientific interpretation, saved artifacts, and replay commands.
 
+![Offline MCAR study report with eight configurations, 32 method results, and a known effect of 0.25.](docs/images/study-report.png)
+
+Offline report for the 8-cell MCAR example; each configuration and seed remains separate.
+
 ## Scenarios
 
 - **Randomly missing measurements** (`MCAR_SMALL_EFFECTIVE_SAMPLE`): covariate
