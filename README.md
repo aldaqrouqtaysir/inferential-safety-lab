@@ -81,6 +81,8 @@ must be read together.
 - immutable saved results with stale-draft warnings;
 - one intentionally light, keyboard-accessible responsive interface;
 - replay-stable canonical JSON and a print-ready audit-ready Safety Card;
+- bounded CLI studies comparing declared configurations and seeds with separate
+  cell results and offline reports;
 - no uploads, external data, accounts, storage, telemetry, or runtime network
   path.
 
@@ -104,6 +106,22 @@ Run the frozen demonstration from the CLI:
 
 The normal installation uses only NumPy, pandas, and Streamlit. Development
 tools are isolated in the `dev` extra.
+
+## Batch experiment comparisons
+
+Declare a grid of sample sizes, scenario intensities, and explicit seeds, then
+compare the existing methods in an offline report. Studies validate every cell
+before simulation and allow at most 32 cells. Choose a new output directory:
+
+```powershell
+.\.venv\Scripts\inferential-safety.exe validate-study --config configs/studies/mcar-sensitivity.json
+.\.venv\Scripts\inferential-safety.exe study --config configs/studies/mcar-sensitivity.json --output artifacts/mcar-sensitivity
+```
+
+The example specifies 8 cells, 640 simulated datasets, and 32 method rows.
+Results stay separate across configurations and seeds, with no pooled score or
+method ranking. See [studies.md](docs/studies.md) for the configuration format,
+scientific interpretation, saved artifacts, and replay commands.
 
 ## Scenarios
 
