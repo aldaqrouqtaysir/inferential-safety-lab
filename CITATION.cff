@@ -5,7 +5,8 @@ type: software
 version: 0.2.1
 date-released: 2026-08-17
 authors:
-  - name: "Taysir"
+  - given-names: "Taysir"
+    family-names: "Al Daqrouq"
 license: BSD-3-Clause
 repository-code: "https://github.com/aldaqrouqtaysir/inferential-safety-lab"
 url: "https://github.com/aldaqrouqtaysir/inferential-safety-lab"

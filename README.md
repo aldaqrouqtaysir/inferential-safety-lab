@@ -4,7 +4,9 @@ See how analysis choices behave when data go wrong.
 
 [![CI](https://github.com/aldaqrouqtaysir/inferential-safety-lab/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/aldaqrouqtaysir/inferential-safety-lab/actions/workflows/ci.yml?query=branch%3Amain)
 
-[**Open the verified Live Demo**](https://inferential-safety-lab.streamlit.app/)
+[**Open the live demo**](https://inferential-safety-lab.streamlit.app/) ·
+[Run locally](#quick-start) · [Methods](docs/methods.md) ·
+[Screenshot gallery](docs/screenshots.md)
 
 Inferential Safety Lab creates synthetic data where the correct answer is known,
 removes or distorts some measurements, applies a fixed set of analysis
@@ -21,14 +23,9 @@ approaches, and compares:
 
 ![Understand page](docs/images/01-understand.png)
 
-Version 0.2.1 is the first public release. The source repository is
-[github.com/aldaqrouqtaysir/inferential-safety-lab](https://github.com/aldaqrouqtaysir/inferential-safety-lab).
-The public application is deployed from `main` on Streamlit Community Cloud.
-
-## Live demo
-
-Run the verified public application at
-[inferential-safety-lab.streamlit.app](https://inferential-safety-lab.streamlit.app/).
+**Public release:** [v0.2.1](https://github.com/aldaqrouqtaysir/inferential-safety-lab/releases/tag/v0.2.1). Built by **Taysir Al Daqrouq**.
+The application is deployed from `main` on Streamlit Community Cloud; the same
+simulation engine is available through the command line.
 
 ## Product flow
 
@@ -43,13 +40,8 @@ The Streamlit application has three top-level pages:
    comparison in plain language, and places exact formulas, denominators,
    contracts, replay data, and canonical JSON in a technical disclosure.
 
-![Experiment setup](docs/images/02-experiment.png)
-
-![Saved result summary](docs/images/03-results-summary.png)
-
-![Experiment controls on mobile](docs/images/06-experiment-mobile.png)
-
-![Known-answer rail on mobile](docs/images/07-results-mobile.png)
+[See the desktop and mobile walkthrough](docs/screenshots.md) for the experiment
+controls, result summary, charts, and standalone Safety Card.
 
 ## One worked result
 
@@ -80,7 +72,7 @@ must be read together.
 - explicit row-retention, filling, changed-value, and deletion burdens;
 - immutable saved results with stale-draft warnings;
 - one intentionally light, keyboard-accessible responsive interface;
-- replay-stable canonical JSON and a print-ready audit-ready Safety Card;
+- replay-stable canonical JSON and a print-ready Safety Card with explicit metrics;
 - bounded CLI studies comparing declared configurations and seeds with separate
   cell results and offline reports;
 - no uploads, external data, accounts, storage, telemetry, or runtime network
@@ -123,9 +115,8 @@ Results stay separate across configurations and seeds, with no pooled score or
 method ranking. See [studies.md](docs/studies.md) for the configuration format,
 scientific interpretation, saved artifacts, and replay commands.
 
-![Offline MCAR study report with eight configurations, 32 method results, and a known effect of 0.25.](docs/images/study-report.png)
-
-Offline report for the 8-cell MCAR example; each configuration and seed remains separate.
+[View the offline study report](docs/images/study-report.png); each configuration
+and seed remains separate.
 
 ## Scenarios
 
@@ -205,8 +196,6 @@ contrast tokens, reduced motion, console errors, light and dark OS preferences,
 1440x1000, 1366x768, 1024x768, 390x844, and a 125% zoom-equivalent layout.
 Every CI matrix job independently tests exact fresh-process replay; the frozen
 reference test separately enforces typed cross-platform scientific equivalence.
-
-![Standalone Safety Card](docs/images/05-safety-card.png)
 
 ## Limitations
 

@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.12,<3.14"
 license = "BSD-3-Clause"
 license-files = ["LICENSE"]
-authors = [{name = "Inferential Safety Lab author"}]
+authors = [{name = "Taysir Al Daqrouq"}]
 keywords = ["simulation", "statistics", "missing-data", "robustness", "education"]
 classifiers = [
   "Development Status :: 4 - Beta",
